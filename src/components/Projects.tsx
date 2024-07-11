@@ -2,42 +2,42 @@ import React, { useState } from "react";
 
 const projectsData = [
   {
-    category: "2D Vinyl Design",
+    category: "Web Development",
     image: "path/to/project-image1.jpg",
     title: "2D Vinyl Design",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     demoLink: "#",
   },
   {
-    category: "2D Vinyl Design",
+    category: "Web Development",
     image: "path/to/project-image2.jpg",
     title: "2D Vinyl Design",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     demoLink: "#",
   },
   {
-    category: "Creative Poster Design",
+    category: "Graphic Design",
     image: "path/to/project-image3.jpg",
     title: "Creative Poster Design",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     demoLink: "#",
   },
   {
-    category: "Embosed Logo Design",
+    category: "Graphic Design",
     image: "path/to/project-image4.jpg",
     title: "Embosed Logo Design",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     demoLink: "#",
   },
   {
-    category: "3D Helmet Design",
+    category: "Web Design",
     image: "path/to/project-image5.jpg",
-    title: "3D Helmet Design",
+    title: "Nedge Ghana",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    demoLink: "#",
+    demoLink: "https://nedgeghana.com",
   },
   {
-    category: "2D Vinyl Design",
+    category: "UI/UX Design",
     image: "path/to/project-image6.jpg",
     title: "2D Vinyl Design",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -50,10 +50,10 @@ const Projects: React.FC = () => {
 
   const categories = [
     "ALL",
-    "2D Vinyl Design",
-    "Creative Poster Design",
-    "Embosed Logo Design",
-    "3D Helmet Design",
+    "Web Design",
+    "Web Development",
+    "Graphic Design",
+    "UI/UX Design",
   ];
 
   const filteredProjects =
