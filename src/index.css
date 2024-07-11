@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.slick-prev,
+.slick-next {
+  display: none !important;
+}
+
+.relative:hover .slick-prev,
+.relative:hover .slick-next {
+  display: block !important;
+}
