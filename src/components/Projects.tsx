@@ -1,49 +1,5 @@
 import React, { useState } from "react";
-
-const projectsData = [
-  {
-    category: "Web Development",
-    image: "path/to/project-image1.jpg",
-    title: "2D Vinyl Design",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    demoLink: "#",
-  },
-  {
-    category: "Web Development",
-    image: "path/to/project-image2.jpg",
-    title: "2D Vinyl Design",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    demoLink: "#",
-  },
-  {
-    category: "Graphic Design",
-    image: "path/to/project-image3.jpg",
-    title: "Creative Poster Design",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    demoLink: "#",
-  },
-  {
-    category: "Graphic Design",
-    image: "path/to/project-image4.jpg",
-    title: "Embosed Logo Design",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    demoLink: "#",
-  },
-  {
-    category: "Web Design",
-    image: "path/to/project-image5.jpg",
-    title: "Nedge Ghana",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    demoLink: "https://nedgeghana.com",
-  },
-  {
-    category: "UI/UX Design",
-    image: "path/to/project-image6.jpg",
-    title: "2D Vinyl Design",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    demoLink: "#",
-  },
-];
+import { projectsData } from "../data/ProjectsData";
 
 const Projects: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState("ALL");
@@ -84,17 +40,22 @@ const Projects: React.FC = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {filteredProjects.map((project, index) => (
-            <div key={index} className="bg-white p-6 shadow-lg rounded-lg">
+            <div
+              key={index}
+              className="bg-white p-6 shadow-lg rounded-lg flex flex-col justify-between h-full"
+            >
               <img
                 src={project.image}
                 alt={project.title}
-                className="mb-4 rounded-lg"
+                className="mb-4 rounded-lg w-full h-48 object-cover"
               />
-              <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-              <p className="text-gray-700 mb-4">{project.description}</p>
+              <div className="flex-grow">
+                <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+                <p className="text-gray-700 mb-4">{project.description}</p>
+              </div>
               <a
                 href={project.demoLink}
-                className="bg-blue-500 text-white px-4 py-2 rounded-full"
+                className="bg-blue-500 text-white px-4 py-2 rounded-full self-center"
               >
                 View Demo
               </a>
