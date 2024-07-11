@@ -1,13 +1,13 @@
 import React from "react";
-import img from "../assets/profile1.png";
+
 const About: React.FC = () => {
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
         <div className="w-full md:w-1/2 flex justify-center">
           <img
-            src={img}
-            alt="Philip Gilbert"
+            src="/images/profile1.png"
+            alt="Elijah Apreko"
             className="w-64 h-64 md:w-80 md:h-80 border-white shadow-lg"
           />
         </div>
