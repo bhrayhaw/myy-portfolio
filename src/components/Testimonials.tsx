@@ -5,25 +5,30 @@ import "slick-carousel/slick/slick-theme.css";
 
 const testimonialsData = [
   {
-    text: "Do you want to be even more successful? Learn to love learning and growth. The more effort you put into improving your skills, the bigger the payoff you.",
+    text: "The new e-commerce site Elijah developed has boosted our online sales tremendously. Highly skilled and professional!",
     name: "Harriet Maxwell",
     position: "CEO at Google",
-    image: "path/to/image1.jpg",
+    image: "/images/client.png",
   },
   {
-    text: "A purpose is the eternal condition for success. Every former smoker can tell you just how hard it is to stop smoking cigarettes. However.",
+    text: "Elijah's web development skills are exceptional. The custom CMS he built for us is intuitive and efficient.",
     name: "Carolyn Craig",
     position: "CEO at Facebook",
-    image: "path/to/image2.jpg",
+    image: "/images/client1.jpg",
   },
-  // Add more testimonials as needed
+  {
+    image: "path/to/image1.jpg",
+    text: "Elijah transformed our website into a modern, user-friendly platform. Our user engagement has significantly increased!",
+    name: "Mr. Francis",
+    position: "CEO at SKTLive",
+  },
 ];
 
 const Testimonials: React.FC = () => {
   const sliderRef = React.useRef<Slider>(null);
 
   const settings = {
-    dots: false,
+    dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 2,
@@ -41,17 +46,17 @@ const Testimonials: React.FC = () => {
           <Slider ref={sliderRef} {...settings}>
             {testimonialsData.map((testimonial, index) => (
               <div key={index} className="px-6">
-                <div className="bg-white p-6 shadow-lg rounded-lg flex items-center">
+                <div className="bg-white p-6 shadow-lg rounded-lg flex flex-col items-center">
                   <img
                     src={testimonial.image}
                     alt={testimonial.name}
-                    className="w-16 h-16 rounded-full mr-4"
+                    className="w-24 h-24 rounded-full mb-4 object-cover"
                   />
-                  <div>
-                    <p className="text-gray-700 mb-4">{testimonial.text}</p>
-                    <h3 className="text-xl font-bold">{testimonial.name}</h3>
-                    <p className="text-gray-500">{testimonial.position}</p>
-                  </div>
+                  <p className="text-gray-700 mb-4 text-center italic">
+                    "{testimonial.text}"
+                  </p>
+                  <h3 className="text-xl font-bold">{testimonial.name}</h3>
+                  <p className="text-gray-500">{testimonial.position}</p>
                 </div>
               </div>
             ))}
