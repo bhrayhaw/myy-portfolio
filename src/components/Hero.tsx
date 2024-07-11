@@ -1,7 +1,6 @@
 // src/components/Hero.tsx
 import React from "react";
 import { ReactTyped } from "react-typed";
-import img from "../assets/profile.png";
 
 const Hero: React.FC = () => {
   return (
@@ -33,7 +32,7 @@ const Hero: React.FC = () => {
         <div className="md:w-1/2 flex justify-center">
           <div className="relative group">
             <img
-              src={ img }
+              src="/images/profile.png"
               alt="Elijah Apreko"
               className="w-64 h-64 md:w-80 md:h-80 transform transition-transform duration-300 group-hover:scale-110"
             />
