@@ -11,3 +11,7 @@
 .relative:hover .slick-next {
   display: block !important;
 }
+
+body {
+  font-family: 'Roboto Mono', sans-serif;
+}
