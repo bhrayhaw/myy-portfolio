@@ -1,4 +1,5 @@
 interface Project {
+  id: number;
   category: string;
   image: string;
   title: string;
@@ -8,6 +9,7 @@ interface Project {
 
 export const projectsData: Project[] = [
   {
+    id: 1,
     category: "Web Development",
     image: "/images/palm oil.png",
     title: "Palm Oil Tracker App",
@@ -15,6 +17,7 @@ export const projectsData: Project[] = [
     demoLink: "https://palm-oil-tracker.vercel.app/",
   },
   {
+    id: 2,
     category: "Web Development",
     image: "/images/pylifer.png",
     title: "Task Planner App",
@@ -22,6 +25,7 @@ export const projectsData: Project[] = [
     demoLink: "https://pylifer.netlify.app/",
   },
   {
+    id: 3,
     category: "Web Development",
     image: "/images/treli.png",
     title: "Treli",
@@ -29,6 +33,7 @@ export const projectsData: Project[] = [
     demoLink: "https://treli.netlify.app/",
   },
   {
+    id: 4,
     category: "Graphic Design",
     image: "/images/shito.png",
     title: "Shito Flyer",
@@ -36,6 +41,7 @@ export const projectsData: Project[] = [
     demoLink: "#",
   },
   {
+    id: 5,
     category: "Web Design",
     image: "/images/nedge.png",
     title: "Nedge Ghana",
@@ -43,6 +49,7 @@ export const projectsData: Project[] = [
     demoLink: "https://nedgeghana.com",
   },
   {
+    id: 6,
     category: "UI/UX Design",
     image: "/images/agrich.png",
     title: "Agrich",
