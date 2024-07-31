@@ -1,46 +1,98 @@
-// src/components/Hero.tsx
 import React from "react";
-import { ReactTyped } from "react-typed";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faLinkedin,
+  faGithub,
+  faInstagram,
+  faTwitter,
+  faFigma,
+} from "@fortawesome/free-brands-svg-icons";
+import { motion } from "framer-motion";
+import { useTheme } from "../ThemeContext";
+
+const roles = ["SOFTWARE ENGINEER", "WEB DEVELOPER", "GRAPHIC DESIGNER"];
 
 const Hero: React.FC = () => {
+  const [currentRoleIndex, setCurrentRoleIndex] = React.useState(0);
+  const { isDarkMode } = useTheme();
+
+  const jobTitleVariants = {
+    hidden: { x: "100%" },
+    visible: { x: "0%", transition: { duration: 2.5 } },
+  };
+
+  const handleNextTitle = () => {
+    setCurrentRoleIndex((prevIndex) => (prevIndex + 1) % roles.length);
+  };
+
+  React.useEffect(() => {
+    const timer = setTimeout(() => {
+      handleNextTitle();
+    }, 5000);
+
+    return () => clearTimeout(timer);
+  }, [currentRoleIndex]);
+
   return (
-    <section className="bg-gray-50 py-20 px-4 md:px-0">
-      <div className="container mx-auto text-center flex flex-col-reverse md:flex-row items-center justify-center md:justify-between">
-        <div className="text-center md:text-left md:w-1/2 mt-8 md:mt-0 pl-32">
-          {/* <p className="text-sm text-gray-600 mb-2">THIS IS ME</p> */}
-          <h1 className="text-5xl font-bold mb-4">
-            Elijah Yaw Apreko
+    <section className="hero-section">
+      <div className="container mx-auto flex flex-col items-center text-center">
+        <div className="flex flex-col items-center pt-12">
+          <img
+            src="/images/profile.png"
+            alt="Elijah Apreko"
+            className={`w-70 h-70 rounded-full mb-4 border-4 ${
+              isDarkMode ? "border-white" : ""
+            } bg-gradient-to-r from-blue-400 to-purple-500 shadow-lg`}
+          />
+          <h1
+            className={`text-2xl font-bold mb-2 ${
+              isDarkMode
+                ? "bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500"
+                : ""
+            } `}
+          >
+            I am
           </h1>
-          <h2 className="text-3xl font-bold text-blue-500 mb-4">
-            <ReactTyped
-              strings={["Full Stack Developer"]}
-              typeSpeed={250}
-              backSpeed={150}
-              startDelay={1000}
-              loop
-            />
+          <h2
+            className={`text-2xl font-bold mb-2 ${
+              isDarkMode
+                ? "bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500"
+                : ""
+            } `}
+          >
+            Elijah Yaw Apreko
           </h2>
-          <p className="text-lg text-gray-700 mb-8">
-            I am a passionate Full Stack Developer with expertise in creating
-            dynamic and user-friendly web applications. I enjoy solving complex
-            problems and building scalable solutions.
-          </p>
-          <button className="mt-4 px-6 py-3 bg-gradient-to-r from-blue-400 to-purple-500 text-white rounded-lg hover:from-blue-500 hover:to-purple-600">
-            LET'S CONNECT
-          </button>
+
+          <motion.h3
+            key={currentRoleIndex}
+            className={`text-3xl font-bold ${
+              !isDarkMode
+                ? "bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent"
+                : "text-white hover:bg-gradient-to-r hover:from-blue-400 hover:to-purple-500 hover:bg-clip-text hover:text-transparent"
+            }`}
+            variants={jobTitleVariants}
+            initial="hidden"
+            animate="visible"
+          >
+            {roles[currentRoleIndex]}
+          </motion.h3>
         </div>
-        <div className="md:w-1/2 flex justify-center">
-          <div className="relative group">
-            <img
-              src="/images/profile.png"
-              alt="Elijah Apreko"
-              className="w-64 h-64 md:w-80 md:h-80 transform transition-transform duration-300 group-hover:scale-110"
-            />
-            <div
-              className="absolute inset-0 border-4 border-blue-500 rounded-full transform transition-transform duration-300 group-hover:scale-110"
-              style={{ zIndex: -1, top: "20px", left: "20px" }}
-            ></div>
-          </div>
+        <div className="flex justify-center space-x-6 mt-4">
+          <a href="#" className="hover:text-purple-500">
+            <FontAwesomeIcon icon={faLinkedin} size="2x" />
+          </a>
+          <a href="#" className="hover:text-purple-500">
+            <FontAwesomeIcon icon={faGithub} size="2x" />
+          </a>
+          <a href="#" className="hover:text-purple-500">
+            <FontAwesomeIcon icon={faInstagram} size="2x" />
+          </a>
+          <a href="#" className="hover:text-purple-500">
+            <FontAwesomeIcon icon={faTwitter} size="2x" />
+          </a>
+          <a href="#" className="hover:text-purple-500">
+            <FontAwesomeIcon icon={faFigma} size="2x" />
+          </a>
         </div>
       </div>
     </section>
