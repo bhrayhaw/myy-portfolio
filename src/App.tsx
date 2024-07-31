@@ -52,12 +52,12 @@ const AppContent: React.FC = () => {
   }, []);
 
   const particlesOptions = {
-    background: {
-      color: {
-        value: isDarkMode ? "#000000" : "#ffffff",
-      },
-    },
-    fpsLimit: 60,
+    // background: {
+    //   color: {
+    //     value: isDarkMode ? "#000000" : "#ffffff",
+    //   },
+    // },
+    fpsLimit: 30,
     particles: {
       color: {
         value: isDarkMode ? "#ffffff" : "#000000",
@@ -76,7 +76,7 @@ const AppContent: React.FC = () => {
           default: "bounce" as const,
         },
         random: false,
-        speed: 2,
+        speed: 1.5,
         straight: false,
       },
       number: {
@@ -90,11 +90,11 @@ const AppContent: React.FC = () => {
         value: 0.5,
       },
       shape: {
-        type: "circle" as const,
+        type: "polygon" as const,
       },
       size: {
         random: true,
-        value: 5,
+        value: 3,
       },
     },
     detectRetina: true,
@@ -102,15 +102,15 @@ const AppContent: React.FC = () => {
 
   return init ? (
     <div className={`app ${isDarkMode ? "dark-mode" : "light-mode"}`}>
-      <div className="pointer" id="pointer"></div>
-      <Particles
-        id="tsparticles"
-        options={particlesOptions}
-      />
+      <div
+        className={`pointer ${isDarkMode ? "border-white" : "border-purple-500"}`}
+        id="pointer"
+      ></div>
+      <Particles id="tsparticles" options={particlesOptions} />
       <Router>
         <div
           className="flex flex-col min-h-screen"
-          style={{ position: "relative", zIndex: 1 }}
+          style={{ position: "relative", zIndex: 10 }}
         >
           <Header />
           <main className="flex-grow">
