@@ -39,14 +39,14 @@ const Testimonials: React.FC = () => {
   };
 
   return (
-    <section className="py-20 bg-gray-100">
+    <section className="py-20">
       <div className="container mx-auto text-center">
         <h2 className="text-3xl font-bold mb-8">Client's Feedback About Me</h2>
         <div className="relative">
           <Slider ref={sliderRef} {...settings}>
             {testimonialsData.map((testimonial, index) => (
               <div key={index} className="px-6">
-                <div className="bg-white p-6 shadow-lg rounded-lg flex flex-col items-center">
+                <div className="bg-gray-200 p-6 shadow-lg rounded-lg flex flex-col items-center">
                   <img
                     src={testimonial.image}
                     alt={testimonial.name}
