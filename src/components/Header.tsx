@@ -18,14 +18,14 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="bg-gray-100 dark:bg-gray-800 p-4 flex justify-between items-center shadow-md">
+    <header className="p-4 flex justify-between items-center shadow-md">
       <Link to="/" className="text-2xl font-bold text-purple-500">
         Elias Media
       </Link>
       <nav
         className={`${
           isMobileMenuOpen ? "block" : "hidden"
-        } flex flex-col items-start w-full mt-4 bg-gray-100 dark:bg-gray-800 p-4 rounded-md shadow-md transition-all duration-300 md:flex md:flex-row md:items-center md:justify-center md:bg-transparent md:shadow-none md:mt-0`}
+        } flex flex-col items-start w-full mt-4 p-4 rounded-md shadow-md transition-all duration-300 md:flex md:flex-row md:items-center md:justify-center md:bg-transparent md:shadow-none md:mt-0`}
       >
         <div className="flex justify-between w-full mb-4 md:hidden">
           <div></div>
