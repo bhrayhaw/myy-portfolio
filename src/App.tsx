@@ -4,7 +4,7 @@ import Header from "./components/Header";
 import { ThemeProvider, useTheme } from "./ThemeContext";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadFull } from "tsparticles";
-import Footer from "./components/Footer";
+// import Footer from "./components/Footer";
 import About from "./components/About";
 import Services from "./components/Services";
 import Projects from "./components/Projects";
@@ -13,25 +13,9 @@ import Plans from "./components/Plans";
 import Blog from "./components/Blog";
 import HomePage from "./pages/HomePage";
 import "./App.css";
+import CustomCursor from "./components/CustomCursor";
 
 const App: React.FC = () => {
-  useEffect(() => {
-    const handleMouseMove = (event: MouseEvent) => {
-      const { clientX, clientY } = event;
-      const pointer = document.getElementById("pointer");
-      if (pointer) {
-        pointer.style.left = `${clientX}px`;
-        pointer.style.top = `${clientY}px`;
-      }
-    };
-
-    window.addEventListener("mousemove", handleMouseMove);
-
-    return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
-    };
-  }, []);
-
   return (
     <ThemeProvider>
       <AppContent />
@@ -102,6 +86,7 @@ const AppContent: React.FC = () => {
 
   return init ? (
     <div className={`app ${isDarkMode ? "dark-mode" : "light-mode"}`}>
+      <CustomCursor />
       <div
         className={`pointer ${isDarkMode ? "border-white" : "border-purple-500"}`}
         id="pointer"
