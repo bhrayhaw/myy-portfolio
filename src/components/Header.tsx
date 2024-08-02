@@ -26,24 +26,24 @@ const Header = () => {
 
       {/* Desktop Navigation */}
       <div className="hidden md:flex items-center space-x-4">
-        <Link to="/" className="font-medium hover:text-purple-300">
+        <Link to="/" className="font-medium hover:text-purple-500">
           Home
         </Link>
         <Link
           to="/about"
-          className="font-medium hover:text-purple-300"
+          className="font-medium hover:text-purple-500"
         >
           About
         </Link>
         <Link
           to="/services"
-          className="font-medium hover:text-purple-300"
+          className="font-medium hover:text-purple-500"
         >
           Services
         </Link>
         <Link
           to="/projects"
-          className="font-medium hover:text-purple-300"
+          className="font-medium hover:text-purple-500"
         >
           Projects
         </Link>
