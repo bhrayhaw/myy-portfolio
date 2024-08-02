@@ -35,7 +35,10 @@ const Hero: React.FC = () => {
 
   return (
     <section className="hero-section">
-      <div className="container mx-auto flex flex-col items-center text-center">
+      <motion.div
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, ease: "easeOut" }} className="container mx-auto flex flex-col items-center text-center">
         <div className="flex flex-col items-center pt-12">
           <img
             src="/images/profile.png"
@@ -94,7 +97,7 @@ const Hero: React.FC = () => {
             <FontAwesomeIcon icon={faFigma} size="2x" />
           </a>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
