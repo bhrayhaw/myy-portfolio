@@ -5,16 +5,16 @@ import "slick-carousel/slick/slick-theme.css";
 
 const testimonialsData = [
   {
-    text: "The new e-commerce site Elijah developed has boosted our online sales tremendously. Highly skilled and professional!",
-    name: "Harriet Maxwell",
-    position: "CEO at Google",
-    image: "/images/client.png",
+    text: "Elijah is a talented developer with a keen eye for design. He's a pleasure to work with and always delivers on time.",
+    name: "Roberta Mawunyo Akoto",
+    position: "Women Techmakers Ambassador",
+    image: "/images/robbie.png",
   },
   {
-    text: "Elijah's web development skills are exceptional. The custom CMS he built for us is intuitive and efficient.",
-    name: "Carolyn Craig",
-    position: "CEO at Facebook",
-    image: "/images/client1.jpg",
+    text: "Elijah's web development skills are exceptional. He's a great team player and always brings fresh ideas to the table.",
+    name: "Emmanuel Appiah",
+    position: "Consultant and C.T.O. & Founder (aireceive LLC)",
+    image: "/images/emma.png",
   },
   {
     image: "path/to/image1.jpg",
