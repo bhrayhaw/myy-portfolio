@@ -78,7 +78,7 @@ const Header = () => {
         initial={{ x: "100%" }}
         animate={{ x: isMobileMenuOpen ? 0 : "100%" }}
         transition={{ type: "spring", stiffness: 300, damping: 30 }}
-        className="fixed top-0 right-0 w-full h-screen bg-gradient-to-r from-purple-500 to-indigo-600 md:hidden z-50 flex flex-col items-center"
+        className="fixed top-0 right-0 w-full h-screen bg-gray-800 md:hidden z-50 flex flex-col items-center"
       >
         <div className="w-full flex justify-between items-center px-4 py-4">
           <Link
