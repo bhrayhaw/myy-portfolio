@@ -80,7 +80,7 @@ const About: React.FC = () => {
             my skills to drive innovation and deliver high-quality solutions.
           </motion.p>
           <motion.a
-            href="/path/to/your/resume.pdf" // Replace with your actual resume path
+            href={import.meta.env.VITE_RESUME} // Replace with your actual resume path
             download
             className="mt-4 inline-block px-6 py-3 md:px-8 md:py-4 bg-gradient-to-r from-blue-400 to-purple-500 text-white rounded-lg hover:from-blue-500 hover:to-purple-600"
             whileHover={{ scale: 1.05 }}
