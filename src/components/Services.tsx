@@ -109,14 +109,14 @@ const Services: React.FC = () => {
             </motion.div>
           ))}
         </div>
-        <motion.div>
+        {/* <motion.div>
           <a
             href="/#"
             className="inline-block mt-8 px-8 py-3 bg-purple-500 text-white font-semibold rounded-lg shadow-lg hover:bg-purple-600 transition duration-200"
           >
             Hire Me
           </a>
-        </motion.div>
+        </motion.div> */}
         <motion.div>
           <Testimonials />
         </motion.div>
