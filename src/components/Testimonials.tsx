@@ -16,12 +16,12 @@ const testimonialsData = [
     position: "Consultant and C.T.O. & Founder (aireceive LLC)",
     image: "/images/emma.png",
   },
-  {
-    image: "path/to/image1.jpg",
-    text: "Elijah transformed our website into a modern, user-friendly platform. Our user engagement has significantly increased!",
-    name: "Mr. Francis",
-    position: "CEO at SKTLive",
-  },
+  // {
+  //   image: "path/to/image1.jpg",
+  //   text: "Elijah transformed our website into a modern, user-friendly platform. Our user engagement has significantly increased!",
+  //   name: "Mr. Francis",
+  //   position: "CEO at SKTLive",
+  // },
 ];
 
 const Testimonials: React.FC = () => {
